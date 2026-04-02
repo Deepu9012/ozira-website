@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+[7:56 pm, 02/04/2026] Anni Bhai (Chamla) 💖💖 Dec: <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -47,133 +47,198 @@ body{
   background-position:center;
   display:flex;
   justify-content:center;
+  al…
+[8:06 pm, 02/04/2026] Anni Bhai (Chamla) 💖💖 Dec: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OZIRA - Luxury Perfumes</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background:#0b0b0b;
+  color:white;
+}
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content:space-between;
   align-items:center;
-  text-align:center;
+  padding:20px 60px;
+  background:linear-gradient(to right,#0b0b0b,#1c2b2b);
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-.hero-text h1{
-  font-size:60px;
-}
-
-.hero-text p{
-  margin:10px 0;
-  font-size:18px;
-}
-
-.btn{
-  background:gold;
-  padding:10px 20px;
-  border:none;
-  border-radius:20px;
-  cursor:pointer;
+/* LOGO */
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:26px;
   font-weight:bold;
-}
-
-/* PRODUCTS */
-.products{
-  padding:50px;
-  text-align:center;
-}
-
-.products h1{
-  margin-bottom:30px;
   color:gold;
 }
 
-.card{
-  background:#111;
-  padding:20px;
-  border-radius:15px;
-  margin:15px;
-  display:inline-block;
-  width:250px;
-  box-shadow:0 0 20px rgba(255,215,0,0.2);
+.logo img{
+  width:35px;
 }
 
-.card img{
+/* MENU */
+.menu{
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+
+.menu-item{
+  position:relative;
+  cursor:pointer;
+}
+
+/* DROPDOWN */
+.dropdown{
+  position:absolute;
+  top:30px;
+  left:0;
+  background:white;
+  color:black;
+  width:200px;
+  display:none;
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.dropdown div{
+  padding:12px;
+  cursor:pointer;
+}
+
+.dropdown div:hover{
+  background:#eee;
+}
+
+.menu-item:hover .dropdown{
+  display:block;
+}
+
+/* SEARCH ICON */
+.search{
+  cursor:pointer;
+  font-size:20px;
+}
+
+/* SEARCH POPUP */
+.search-box{
+  position:fixed;
+  top:0;
+  left:0;
   width:100%;
-  border-radius:10px;
+  height:100%;
+  background:rgba(0,0,0,0.8);
+  display:none;
+  justify-content:center;
+  align-items:center;
 }
 
-.card h3{
-  margin:10px 0;
+.search-box input{
+  width:60%;
+  padding:15px;
+  font-size:18px;
+  border-radius:30px;
+  border:none;
+  outline:none;
 }
 
-/* FOOTER */
-.footer{
+/* HERO */
+.hero{
+  height:90vh;
+  background:url('hero.jpeg') no-repeat center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
-  padding:20px;
-  background:#111;
-  margin-top:50px;
 }
+
+.hero h1{
+  font-size:60px;
+  color:gold;
+}
+
 </style>
-
-<script>
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-function addToCart(name, price){
-  cart.push({name, price});
-  localStorage.setItem("cart", JSON.stringify(cart));
-  alert(name + " added to cart");
-}
-</script>
-
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<div class="nav">
-  <div class="logo">OZIRA</div>
-  <div class="menu">
-    <a href="#">Home</a>
-    <a href="#">Shop</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-    <a href="cart.html">🛒</a>
+<div class="navbar">
+
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="logo.png"> 
+    OZIRA
   </div>
+
+  <!-- MENU -->
+  <div class="menu">
+
+    <div class="menu-item">Home</div>
+
+    <!-- FRAGRANCES -->
+    <div class="menu-item">Fragrances ▼
+      <div class="dropdown">
+        <div>Perfumes</div>
+        <div>Pocket Perfumes</div>
+      </div>
+    </div>
+
+    <!-- GIFTING -->
+    <div class="menu-item">Gifting ▼
+      <div class="dropdown">
+        <div>Gift Packs</div>
+        <div>Gift Sets</div>
+        <div>Combos</div>
+      </div>
+    </div>
+
+    <div class="menu-item">About</div>
+    <div class="menu-item">Contact</div>
+
+    <!-- SEARCH -->
+    <div class="search" onclick="openSearch()">🔍</div>
+
+  </div>
+</div>
+
+<!-- SEARCH POPUP -->
+<div class="search-box" id="searchBox">
+  <input type="text" placeholder="Search products...">
 </div>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-text">
-    <h1>OZIRA</h1>
-    <p>Luxury Perfumes for You</p>
-    <button class="btn">Shop Now</button>
-  </div>
-</section>
-
-<!-- PRODUCTS -->
-<div class="products">
-  <h1>Our Collection</h1>
-
-  <div class="card">
-    <img src="pink.jpeg">
-    <h3>Midnight Oud</h3>
-    <p>₹299</p>
-    <button class="btn" onclick="addToCart('Midnight Oud',299)">Add to Cart</button>
-  </div>
-
-  <div class="card">
-    <img src="blue.png">
-    <h3>Aqua Rush</h3>
-    <p>₹299</p>
-    <button class="btn" onclick="addToCart('Aqua Rush',299)">Add to Cart</button>
-  </div>
-
-  <div class="card">
-    <img src="clear.png">
-    <h3>Alpine Luxury</h3>
-    <p>₹299</p>
-    <button class="btn" onclick="addToCart('Alpine Luxury',299)">Add to Cart</button>
-  </div>
-
+<div class="hero">
+  <h1>EXCLUSIVE DEAL</h1>
 </div>
 
-<!-- FOOTER -->
-<div class="footer">
-  <p>© 2026 OZIRA - The Art of Perfection</p>
-</div>
+<script>
+function openSearch(){
+  document.getElementById("searchBox").style.display="flex";
+}
+
+document.getElementById("searchBox").onclick = function(){
+  this.style.display="none";
+}
+</script>
 
 </body>
 </html>
