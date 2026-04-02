@@ -21,10 +21,10 @@ body{background:#0b0b0b;color:#fff;}
 }
 
 .logo{
-  font-size:30px;
+  font-size:32px;
   color:gold;
   font-weight:bold;
-  letter-spacing:2px;
+  letter-spacing:3px;
 }
 
 .menu a{
@@ -35,8 +35,8 @@ body{background:#0b0b0b;color:#fff;}
 
 .hero{
   height:90vh;
-  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
-  url('assets/images/banner-1.jpg') center/cover;
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+  url('hero.jpeg') center/cover;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -78,10 +78,12 @@ body{background:#0b0b0b;color:#fff;}
   background:#111;
   padding:20px;
   border-radius:15px;
+  box-shadow:0 0 15px rgba(255,215,0,0.2);
 }
 
 .card img{
   width:100%;
+  border-radius:10px;
 }
 
 .footer{
@@ -94,6 +96,7 @@ body{background:#0b0b0b;color:#fff;}
 
 <body>
 
+<!-- NAVBAR -->
 <div class="nav">
   <div class="logo">OZIRA</div>
   <div class="menu">
@@ -104,6 +107,7 @@ body{background:#0b0b0b;color:#fff;}
   </div>
 </div>
 
+<!-- HERO -->
 <section class="hero">
   <div>
     <h1>BUY 2 GET 1 FREE</h1>
@@ -112,29 +116,31 @@ body{background:#0b0b0b;color:#fff;}
   </div>
 </section>
 
+<!-- PRODUCTS -->
 <section class="products">
   <h2>Our Collection</h2>
 
   <div class="card">
-    <img src="assets/images/pink.jpeg">
+    <img src="pink.jpeg">
     <h3>Midnight Oud</h3>
     <p>₹299</p>
   </div>
 
   <div class="card">
-    <img src="assets/images/blue.png">
+    <img src="blue.png">
     <h3>Aqua Rush</h3>
     <p>₹299</p>
   </div>
 
   <div class="card">
-    <img src="assets/images/clear.png">
+    <img src="clear.png">
     <h3>Alpine Luxury</h3>
     <p>₹299</p>
   </div>
 
 </section>
 
+<!-- FOOTER -->
 <div class="footer">
   <p>© 2026 OZIRA Perfumes</p>
 </div>
