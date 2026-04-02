@@ -1,66 +1,16 @@
-[7:56 pm, 02/04/2026] Anni Bhai (Chamla) 💖💖 Dec: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OZIRA - The Art of Perfection</title>
+<title>OZIRA</title>
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: Arial, sans-serif;
-}
-
-body{
-  background:black;
-  color:white;
-}
-
-/* NAVBAR */
-.nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 50px;
-}
-
-.logo{
-  font-size:28px;
-  font-weight:bold;
-  color:gold;
-}
-
-.menu a{
-  margin:0 15px;
-  text-decoration:none;
-  color:white;
-}
-
-/* HERO */
-.hero{
-  height:100vh;
-  width:100%;
-  background-image:url('hero.jpeg'); /* IMPORTANT */
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  justify-content:center;
-  al…
-[8:06 pm, 02/04/2026] Anni Bhai (Chamla) 💖💖 Dec: <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OZIRA - Luxury Perfumes</title>
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
 }
 
 body{
@@ -74,10 +24,7 @@ body{
   justify-content:space-between;
   align-items:center;
   padding:20px 60px;
-  background:linear-gradient(to right,#0b0b0b,#1c2b2b);
-  position:sticky;
-  top:0;
-  z-index:1000;
+  background:#111;
 }
 
 /* LOGO */
@@ -85,9 +32,9 @@ body{
   display:flex;
   align-items:center;
   gap:10px;
+  color:gold;
   font-size:26px;
   font-weight:bold;
-  color:gold;
 }
 
 .logo img{
@@ -97,7 +44,7 @@ body{
 /* MENU */
 .menu{
   display:flex;
-  gap:30px;
+  gap:25px;
   align-items:center;
 }
 
@@ -115,13 +62,10 @@ body{
   color:black;
   width:200px;
   display:none;
-  border-radius:8px;
-  overflow:hidden;
 }
 
 .dropdown div{
   padding:12px;
-  cursor:pointer;
 }
 
 .dropdown div:hover{
@@ -132,19 +76,18 @@ body{
   display:block;
 }
 
-/* SEARCH ICON */
+/* SEARCH */
 .search{
   cursor:pointer;
-  font-size:20px;
 }
 
 /* SEARCH POPUP */
 .search-box{
   position:fixed;
-  top:0;
-  left:0;
   width:100%;
   height:100%;
+  top:0;
+  left:0;
   background:rgba(0,0,0,0.8);
   display:none;
   justify-content:center;
@@ -157,25 +100,15 @@ body{
   font-size:18px;
   border-radius:30px;
   border:none;
-  outline:none;
 }
 
 /* HERO */
 .hero{
   height:90vh;
   background:url('hero.jpeg') no-repeat center/cover;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
 }
-
-.hero h1{
-  font-size:60px;
-  color:gold;
-}
-
 </style>
+
 </head>
 
 <body>
@@ -185,7 +118,7 @@ body{
 
   <!-- LOGO -->
   <div class="logo">
-    <img src="logo.png"> 
+    <img src="logo.png">
     OZIRA
   </div>
 
@@ -194,7 +127,7 @@ body{
 
     <div class="menu-item">Home</div>
 
-    <!-- FRAGRANCES -->
+    <!-- FRAGRANCE -->
     <div class="menu-item">Fragrances ▼
       <div class="dropdown">
         <div>Perfumes</div>
@@ -202,7 +135,7 @@ body{
       </div>
     </div>
 
-    <!-- GIFTING -->
+    <!-- GIFT -->
     <div class="menu-item">Gifting ▼
       <div class="dropdown">
         <div>Gift Packs</div>
@@ -214,28 +147,25 @@ body{
     <div class="menu-item">About</div>
     <div class="menu-item">Contact</div>
 
-    <!-- SEARCH -->
     <div class="search" onclick="openSearch()">🔍</div>
 
   </div>
 </div>
 
-<!-- SEARCH POPUP -->
+<!-- SEARCH BOX -->
 <div class="search-box" id="searchBox">
   <input type="text" placeholder="Search products...">
 </div>
 
 <!-- HERO -->
-<div class="hero">
-  <h1>EXCLUSIVE DEAL</h1>
-</div>
+<div class="hero"></div>
 
 <script>
 function openSearch(){
   document.getElementById("searchBox").style.display="flex";
 }
 
-document.getElementById("searchBox").onclick = function(){
+document.getElementById("searchBox").onclick=function(){
   this.style.display="none";
 }
 </script>
