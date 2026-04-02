@@ -1,8 +1,11 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ozira - The Art of Perfection</title><style>
+<title>OZIRA - The Art of Perfection</title>
+
+<style>
 *{
   margin:0;
   padding:0;
@@ -35,11 +38,35 @@ body{
   color:white;
 }
 
-/* HERO (BANNER IMAGE) */
+/* HERO */
 .hero{
   height:100vh;
   width:100%;
-  background:url('hero.jpeg') no-repeat center center/cover;
+  background-image:url('hero.jpeg'); /* IMPORTANT */
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero-text h1{
+  font-size:60px;
+}
+
+.hero-text p{
+  margin:10px 0;
+  font-size:18px;
+}
+
+.btn{
+  background:gold;
+  padding:10px 20px;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+  font-weight:bold;
 }
 
 /* PRODUCTS */
@@ -72,15 +99,6 @@ body{
   margin:10px 0;
 }
 
-.btn{
-  background:gold;
-  padding:10px 20px;
-  border:none;
-  border-radius:20px;
-  cursor:pointer;
-  font-weight:bold;
-}
-
 /* FOOTER */
 .footer{
   text-align:center;
@@ -88,7 +106,9 @@ body{
   background:#111;
   margin-top:50px;
 }
-</style><script>
+</style>
+
+<script>
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function addToCart(name, price){
@@ -96,7 +116,14 @@ function addToCart(name, price){
   localStorage.setItem("cart", JSON.stringify(cart));
   alert(name + " added to cart");
 }
-</script></head><body><!-- NAVBAR --><div class="nav">
+</script>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="nav">
   <div class="logo">OZIRA</div>
   <div class="menu">
     <a href="#">Home</a>
@@ -105,22 +132,48 @@ function addToCart(name, price){
     <a href="#">Contact</a>
     <a href="cart.html">🛒</a>
   </div>
-</div><!-- HERO --><section class="hero"></section><!-- PRODUCTS --><div class="products"><h1>Our Collection</h1><div class="card">
-  <img src="pink.jpeg">
-  <h3>Midnight Oud</h3>
-  <p>₹299</p>
-  <button class="btn" onclick="addToCart('Midnight Oud',299)">Add to Cart</button>
-</div><div class="card">
-  <img src="blue.png">
-  <h3>Aqua Rush</h3>
-  <p>₹299</p>
-  <button class="btn" onclick="addToCart('Aqua Rush',299)">Add to Cart</button>
-</div><div class="card">
-  <img src="clear.png">
-  <h3>Alpine Luxury</h3>
-  <p>₹299</p>
-  <button class="btn" onclick="addToCart('Alpine Luxury',299)">Add to Cart</button>
-</div></div><!-- FOOTER --><div class="footer">
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>OZIRA</h1>
+    <p>Luxury Perfumes for You</p>
+    <button class="btn">Shop Now</button>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<div class="products">
+  <h1>Our Collection</h1>
+
+  <div class="card">
+    <img src="pink.jpeg">
+    <h3>Midnight Oud</h3>
+    <p>₹299</p>
+    <button class="btn" onclick="addToCart('Midnight Oud',299)">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="blue.png">
+    <h3>Aqua Rush</h3>
+    <p>₹299</p>
+    <button class="btn" onclick="addToCart('Aqua Rush',299)">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="clear.png">
+    <h3>Alpine Luxury</h3>
+    <p>₹299</p>
+    <button class="btn" onclick="addToCart('Alpine Luxury',299)">Add to Cart</button>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
   <p>© 2026 OZIRA - The Art of Perfection</p>
-</div></body>
+</div>
+
+</body>
 </html>
